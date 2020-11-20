@@ -285,7 +285,7 @@ genIncUI <- function(){
       return()
     }
     command <- paste0("genInclusion(wkdir = \"", getwd(),
-                      "\",research.folder = \"", val1,
+                      "\", research.folder = \"", val1,
                       "\", table_name = \"", val9,
                       "\", key.var = \"", val3,
                       "\", key.desc = c(",QuotationMarkAdd(paste(val4, collapse = ",")),
@@ -384,11 +384,11 @@ genVarUI <- function(){
     command <- paste0("genVariable(wkdir = \"", getwd(),
                       "\",research.folder = \"", val1,
                       "\", table_name  = \"", val8,
-                      "\", \nidentifier.var = c(", QuotationMarkAdd(paste(val3,collapse=",")),
+                      "\", identifier.var = c(", QuotationMarkAdd(paste(val3,collapse=",")),
                       "), omit.var = c(", QuotationMarkAdd(paste(val4,collapse=",")),
                       "), data.type = \"", getRcmdr("dtype"),
                       "\", overwrite = ", val6,
-                      ", \nusername = \"", getRcmdr("conusername"),
+                      ", username = \"", getRcmdr("conusername"),
                       "\", password = \"", getRcmdr("conpassword"),
                       "\", database = \"",getRcmdr("condatabase"),"\")")
     if (saveEx == TRUE) {
@@ -493,12 +493,12 @@ extractUI <- function() {
 
     command <- paste0("rdataxman_result <- extract_data(wkdir = \"", getwd(),
                       "\", research.folder = \"",getRcmdr("rschfld"),
-                      "\", \ninclusion.xls.file = c(",QuotationMarkAdd(paste(val3,collapse=",")),
+                      "\", inclusion.xls.file = c(",QuotationMarkAdd(paste(val3,collapse=",")),
                       "), variable.xls.file = c(",QuotationMarkAdd(paste(val4,collapse=",")),
-                      "), \ndataLogic = \"",val5,
+                      "), dataLogic = \"",val5,
                       "\", select.output = c(",QuotationMarkAdd(paste(val6,collapse=",")),
                       "), overwrite = ", val7,
-                      ", \nusername = \"",getRcmdr("conusername"),
+                      ", username = \"",getRcmdr("conusername"),
                       "\", password = \"",getRcmdr("conpassword"),
                       "\", database = \"",getRcmdr("condatabase"),"\")")
     print(command)
