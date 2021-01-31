@@ -8,4 +8,4 @@ then install the R Commander plug-in from GitHub using the following commands:
 
     # Package devtools is needed to install from GitHub
     # install.packages("devtools")
-    devtools::install_github("nyilin/RcmdrPlugin.RDataXMan")
+    devtools::install_github("biostatUniBS/RcmdrPlugin.RDataXMan")
